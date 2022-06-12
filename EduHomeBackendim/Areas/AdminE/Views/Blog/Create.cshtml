@@ -1,0 +1,44 @@
+﻿@model Blog
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/AdminE/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col=md-12">
+             <form class="forms-sample" method="post" enctype="multipart/form-data">
+                    <div class="form-group" >
+                      <label asp-for="Photo">Photo</label>
+                      <input asp-for="Photo"  class="form-control"   accept="image/*">
+                      <span asp-validation-for="Photo"></span>
+                    </div>
+                    <div class="form-group" >
+                      <label asp-for="Author">Author</label>
+                      <input asp-for="Author"  class="form-control"  placeholder="Author">
+                      <span asp-validation-for="Author"></span>
+                    </div>
+                    <div class="form-group">
+                      <label asp-for="Title">Title</label>
+                      <input asp-for="Title"  class="form-control"  placeholder="Title">
+                      <span asp-validation-for="Title"></span>
+
+                    </div> 
+                    <div class="form-group">
+                      <label asp-for="CommentCount">CommentCount</label>
+                      <input asp-for="CommentCount"  class="form-control"  placeholder="CommentCount">
+                      <span asp-validation-for="CommentCount"></span>
+
+                    </div>
+                     <div class="form-group">
+                      <label asp-for="WriteTime">WriteTime</label>
+                      <input asp-for="WriteTime"  class="form-control"  placeholder="WriteTime">
+                      <span asp-validation-for="WriteTime"></span>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Create</button>
+                    <a asp-controller="blog" asp-action="Index" class="btn btn-primary">Back</a>
+                  </form>
+        </div>
+       
+    </div>
+</div>

@@ -1,0 +1,54 @@
+﻿@model Bio
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/AdminE/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col=md-12">
+             <form class="forms-sample" method="post" enctype="multipart/form-data">
+                    <div class="form-group" >
+                      <label asp-for="Photo">Photo</label>
+                      <input asp-for="Photo"  class="form-control"   accept="image/*">
+                      <span asp-validation-for="Photo"></span>
+                    </div>
+                    <div class="form-group" >
+                      <label asp-for="Number">Number</label>
+                      <input asp-for="Number"  class="form-control"  placeholder="Number">
+                      <span asp-validation-for="Number"></span>
+                    </div>
+                    <div class="form-group">
+                      <label asp-for="Facebook">Facebook</label>
+                      <input asp-for="Facebook"  class="form-control"  placeholder="Fb">
+                      <span asp-validation-for="Facebook"></span>
+
+                    </div> 
+                    <div class="form-group">
+                      <label asp-for="Vcontact">Vcontact</label>
+                      <input asp-for="Vcontact"  class="form-control"  placeholder="VK">
+                      <span asp-validation-for="Vcontact"></span>
+
+                    </div>
+                     <div class="form-group">
+                      <label asp-for="Pinterest">Pinterest</label>
+                      <input asp-for="Pinterest"  class="form-control"  placeholder="Pi">
+                      <span asp-validation-for="Pinterest"></span>
+
+                    </div>
+                     <div class="form-group">
+                      <label asp-for="Twitter">Twitter</label>
+                      <input asp-for="Twitter"  class="form-control"  placeholder="Twitter">
+                      <span asp-validation-for="Twitter"></span>
+
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-primary mr-2">Create</button>
+                    <a asp-controller="Bio" asp-action="Index" class="btn btn-primary">Back</a>
+                  </form>
+        </div>
+       
+    </div>
+</div>
