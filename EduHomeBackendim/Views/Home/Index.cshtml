@@ -6,45 +6,35 @@
 
 <!-- Background Area Start -->
 <section id="slider-container" class="slider-area">
-    @if (Model.Slider.Count() > 0)
-    {
 
-        @foreach (var item in Model.Slider)
+
+    <div class="slider-owl owl-theme owl-carousel">
+        @foreach (Slider item in Model.Slider)
         {
-            <div class="slider-owl owl-theme owl-carousel">
-                <!-- Start Slingle Slide -->
-                <div class="single-slide item" style="background-image: url(img/slider/@item.ImageUrl)">
-                    <!-- Start Slider Content -->
-                    <div class="slider-content-area">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-7 col-md-offset-left-5">
-                                    <div class="slide-content-wrapper">
-                                        <div class="slide-content">
-                                            @Html.Raw(item.Title)
-                                            <p>@item.Subtitle</p>
-                                            <a class="default-btn" href="about.html">Learn more</a>
-                                        </div>
+            <!-- Start Slingle Slide -->
+            <div class="single-slide item" style="background-image: url(img/slider/@item.ImageUrl)">
+                <!-- Start Slider Content -->
+                <div class="slider-content-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7 col-md-offset-left-5">
+                                <div class="slide-content-wrapper">
+                                    <div class="slide-content">
+                                        @Html.Raw(item.Title)
+                                        <p>@item.Subtitle</p>
+                                        <a class="default-btn" href="about.html">Learn more</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Start Slider Content -->
                 </div>
-
+                <!-- Start Slider Content -->
             </div>
         }
-    }
-    else
-    {
-        <div class="slider-owl owl-theme owl-carousel">
-            <!-- Start Slingle Slide -->
-            <h1 class="text-center">No Slider here</h1>
-
-        </div>
-    }
+    </div>
 </section>
+
 <!-- Background Area End -->
 <!-- Notice Start -->
 <section class="notice-area pt-150 pb-150">
